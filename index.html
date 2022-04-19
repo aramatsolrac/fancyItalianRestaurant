@@ -13,28 +13,47 @@
 
   <body>
     <header class="header">
-      <div>
+      <h1>
         <a href="index.html" class="header__link">
-          <img
-            src="./assets/icons/italy.png"
-            alt="italy"
-            class="header__image"
-          />
-          <h1 class="header__title">Fancy Italian Restaurant</h1>
+          <span class="header__logo">Fancy</span>
+          <p class="header__text">Italian Restaurant</p>
         </a>
-      </div>
+      </h1>
       <div>
         <a href="#menu" class="header__menu">Menu</a>
       </div>
     </header>
 
-    <div class="hero__image">
-      <div class="hero__text">
-        <span
-          >True & memorable taste made with love and
-          <span class="hero__underline">tradition</span></span
-        >
+    <div class="hero">
+      <div id="arrow-left" class="hero__arrow left"></div>
+      <div id="slider" class="hero__slider">
+        <div class="hero__slide slide0">
+          <div class="hero__content">
+            <div class="hero__text">
+              <span
+                >True & memorable taste made with love and
+                <span class="hero__underline">tradition</span></span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="hero__slide slide1">
+          <div class="hero__content">
+            <a class="hero__link" href="#starters">Starters</a>
+          </div>
+        </div>
+        <div class="hero__slide slide2">
+          <div class="hero__content">
+            <a class="hero__link" href="#pasta">Pasta</a>
+          </div>
+        </div>
+        <div class="hero__slide slide3">
+          <div class="hero__content">
+            <a class="hero__link" href="#pizza">Pizza</a>
+          </div>
+        </div>
       </div>
+      <div id="arrow-right" class="hero__arrow right"></div>
     </div>
 
     <main>
@@ -75,37 +94,58 @@
           </div>
         </section>
 
-        <section>
-          <ul class="disclaimers">
-            <li class="disclaimer spicy">= Spicy</li>
-          </ul>
+        <section class="disclaimer">
+          <div class="disclaimer__content">
+            <img
+              src="./assets/icons/spicy.svg"
+              alt="spicy"
+              class="disclaimer__img"
+            />
+            <p class="disclaimer__text">= Spicy</p>
+          </div>
         </section>
       </section>
     </main>
 
     <footer>
-      <section>
-        <div>
+      <section class="footer">
+        <div class="footer__content">
           <h3 class="footer__subtitle">Address</h3>
-          <p>1011 9 Ave SE</p>
-          <p>Calgary</p>
+          <p class="footer__text">1011 9 Ave SE</p>
+          <p class="footer__text">Calgary</p>
         </div>
-        <div>
-          <h3>Hours</h3>
-          <p><span class="footer__days">Monday - Friday:</span> 11am - 9pm</p>
-          <p><span class="footer__days">Saturday - Sunday:</span> 10am - 9pm</p>
+        <div class="footer__content">
+          <h3 class="footer__subtitle">Hours</h3>
+          <p class="footer__text">
+            <span class="footer__days">Monday - Friday:</span> 11am - 9pm
+          </p>
+          <p class="footer__text">
+            <span class="footer__days">Saturday - Sunday:</span> 10am - 9pm
+          </p>
         </div>
-        <div>
-          <h3>Social</h3>
+        <div class="footer__content">
+          <h3 class="footer__subtitle">Social</h3>
           <div class="footer__social-pages">
             <a href="https://facebook.com" target="_blank"
-              ><img class="icon" src="" alt="facebook icon"
+              ><img
+                class="footer__icon"
+                src="./assets/icons/facebook.svg"
+                alt="facebook icon"
+                aria-hidden="true"
             /></a>
             <a href="https://yelp.com" target="_blank"
-              ><img class="icon" src="" alt="yelp icon"
+              ><img
+                class="footer__icon"
+                src="./assets/icons/yelp.svg"
+                alt="yelp icon"
+                aria-hidden="true"
             /></a>
             <a href="https://instagram.com" target="_blank"
-              ><img class="icon" src="" alt="instagram icon"
+              ><img
+                class="footer__icon"
+                src="./assets/icons/instagram.svg"
+                alt="instagram icon"
+                aria-hidden="true"
             /></a>
           </div>
         </div>

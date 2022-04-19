@@ -1,29 +1,115 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/icons/italy.png"
+    />
     <title>Fancy Italian Restaurant</title>
     <meta charset="UTF-8" />
   </head>
 
   <body>
-    <header>
-      <h1>Fancy Italian Restaurant</h1>
+    <header class="header">
+      <div>
+        <a href="index.html" class="header__link">
+          <img
+            src="./assets/icons/italy.png"
+            alt="italy"
+            class="header__image"
+          />
+          <h1 class="header__title">Fancy Italian Restaurant</h1>
+        </a>
+      </div>
+      <div>
+        <a href="#menu" class="header__menu">Menu</a>
+      </div>
     </header>
+
+    <div class="hero__image">
+      <div class="hero__text">
+        <span
+          >True & memorable taste made with love and
+          <span class="hero__underline">tradition</span></span
+        >
+      </div>
+    </div>
+
     <main>
-      <section id="starters">
-        <h2>Starters</h2>
-      </section>
-      <section id="pasta">
-        <h2>Pasta</h2>
-      </section>
-      <section id="pizza">
-        <h2>Pizza</h2>
+      <section id="menu" class="menu">
+        <section class="menu__categories">
+          <div class="menu__options">
+            <img
+              src="./assets/icons/salad.png"
+              alt="salad"
+              class="menu__icon"
+            />
+            <h2 class="menu__title">Starters</h2>
+            <div id="starters"></div>
+          </div>
+        </section>
+
+        <section class="menu__categories">
+          <div class="menu__options">
+            <img
+              src="./assets/icons/pasta.png"
+              alt="pasta"
+              class="menu__icon"
+            />
+            <h2 class="menu__title">Pasta</h2>
+            <div id="pasta"></div>
+          </div>
+        </section>
+
+        <section class="menu__categories">
+          <div class="menu__options">
+            <img
+              src="./assets/icons/Pizza.png"
+              alt="pizza"
+              class="menu__icon"
+            />
+            <h2 class="menu__title">Pizza</h2>
+            <div id="pizza"></div>
+          </div>
+        </section>
+
+        <section>
+          <ul class="disclaimers">
+            <li class="disclaimer spicy">= Spicy</li>
+          </ul>
+        </section>
       </section>
     </main>
+
     <footer>
-      <ul class="disclaimers">
-        <li class="disclaimer spicy">= Spicy</li>
-      </ul>
+      <section>
+        <div>
+          <h3 class="footer__subtitle">Address</h3>
+          <p>1011 9 Ave SE</p>
+          <p>Calgary</p>
+        </div>
+        <div>
+          <h3>Hours</h3>
+          <p><span class="footer__days">Monday - Friday:</span> 11am - 9pm</p>
+          <p><span class="footer__days">Saturday - Sunday:</span> 10am - 9pm</p>
+        </div>
+        <div>
+          <h3>Social</h3>
+          <div class="footer__social-pages">
+            <a href="https://facebook.com" target="_blank"
+              ><img class="icon" src="" alt="facebook icon"
+            /></a>
+            <a href="https://yelp.com" target="_blank"
+              ><img class="icon" src="" alt="yelp icon"
+            /></a>
+            <a href="https://instagram.com" target="_blank"
+              ><img class="icon" src="" alt="instagram icon"
+            /></a>
+          </div>
+        </div>
+      </section>
     </footer>
     <script src="src/index.js"></script>
   </body>

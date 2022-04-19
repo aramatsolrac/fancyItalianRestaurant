@@ -1,0 +1,34 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 3rem;
+  background-color: #869d69;
+}
+
+.footer__content {
+  margin: 1rem 0;
+}
+.footer__subtitle {
+  padding: 0.6rem 0;
+  font-size: 2rem;
+}
+
+.footer__text {
+  font-size: 1.8rem;
+  text-align: left;
+  color: rgb(73, 73, 73);
+}
+.footer__days {
+  font-weight: 700;
+  color: black;
+}
+.footer__social-pages {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer__icon {
+  width: 40px;
+  margin: 0 2rem 0 0;
+}

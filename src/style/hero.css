@@ -1,0 +1,102 @@
+.hero,
+.hero__slider,
+.hero__content,
+.hero__image {
+  width: 100%;
+  height: 20vh;
+}
+
+.hero {
+  position: relative;
+}
+
+.hero__slide {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+  object-position: center;
+}
+
+.slide0 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../../assets/images/restaurant.jpeg");
+}
+
+.slide1 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../../assets/images/salad.jpeg");
+}
+.slide2 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../../assets/images/pasta.jpeg");
+}
+.slide3 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../../assets/images/pizza.jpeg");
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero__text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  text-align: left;
+  font-weight: bold;
+  height: 100%;
+  width: 70%;
+  color: white;
+  font-size: 3.5rem;
+}
+.hero__underline {
+  border-bottom: 3px solid;
+  border-image: linear-gradient(to right, green, white, red);
+  border-image-slice: 1;
+  color: white;
+  font-size: 3.5rem;
+}
+
+.hero__link {
+  font-size: 5rem;
+  color: #fff;
+}
+
+.hero__arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  margin-top: -35px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.hero__arrow.left {
+  border-width: 30px 40px 30px 0;
+  border-color: transparent lightgray transparent transparent;
+  left: 0;
+  margin-left: 30px;
+}
+
+.hero__arrow.right {
+  border-width: 30px 0 30px 40px;
+  border-color: transparent transparent transparent lightgray;
+  right: 0;
+  margin-right: 30px;
+}
+
+.hero__arrow.right:hover {
+  border-color: transparent transparent transparent #fff;
+}
+
+.hero__arrow.left:hover {
+  border-color: transparent #fff transparent transparent;
+}

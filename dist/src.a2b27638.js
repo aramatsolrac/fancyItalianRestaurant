@@ -189,14 +189,32 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"assets/icons/spicy.svg":[function(require,module,exports) {
-module.exports = "/spicy.fdb2c73e.svg";
-},{}],"src/style/index.css":[function(require,module,exports) {
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/style/header.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../../assets/images/restaurant.jpeg":[["restaurant.4121a125.jpeg","assets/images/restaurant.jpeg"],"assets/images/restaurant.jpeg"],"./../../assets/icons/spicy.svg":[["spicy.fdb2c73e.svg","assets/icons/spicy.svg"],"assets/icons/spicy.svg"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/menu.js":[function(require,module,exports) {
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/style/hero.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"./../../assets/images/restaurant.jpeg":[["restaurant.4121a125.jpeg","assets/images/restaurant.jpeg"],"assets/images/restaurant.jpeg"],"./../../assets/images/salad.jpeg":[["salad.46c2aa95.jpeg","assets/images/salad.jpeg"],"assets/images/salad.jpeg"],"./../../assets/images/pasta.jpeg":[["pasta.d623abf4.jpeg","assets/images/pasta.jpeg"],"assets/images/pasta.jpeg"],"./../../assets/images/pizza.jpeg":[["pizza.bbabdd54.jpeg","assets/images/pizza.jpeg"],"assets/images/pizza.jpeg"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/style/menu.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/style/footer.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/style/global.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"./reset.css":"src/style/reset.css","./header.css":"src/style/header.css","./hero.css":"src/style/hero.css","./menu.css":"src/style/menu.css","./footer.css":"src/style/footer.css","_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/menu.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -312,6 +330,8 @@ var _default = {
   }]
 };
 exports.default = _default;
+},{}],"assets/icons/spicy.svg":[function(require,module,exports) {
+module.exports = "/spicy.fdb2c73e.svg";
 },{}],"src/utils/helper.js":[function(require,module,exports) {
 "use strict"; // const spicyIcon = "./../assets/spicy.svg";
 
@@ -351,16 +371,14 @@ function populateMenu(menuName, elementName, name, description, price, menuOrder
     console.log({
       spicy: spicy
     });
-    div.innerHTML = "\n      <h3>".concat(name, "</h3> \n      <img class=\"spicy-icon\" width=\"30\" src=\"").concat(spicy ? _spicy.default : "", "\" >\n      <p>").concat(description, "</p>\n      <p>").concat(formatNumber(price), "</p>\n    ");
+    div.innerHTML = "\n      <div class=\"menu__name-and-price\">\n        <div class=\"menu__name\">\n          <h3>".concat(name, "</h3>\n          <img class=\"menu__spicy\" src=\"").concat(spicy ? _spicy.default : "", "\" >\n        </div>\n        <div>\n          <p>").concat(formatNumber(price), "</p>\n        </div>\n      </div>\n      <p class=\"menu__description\">").concat(description, "</p>\n    ");
     elementName.appendChild(div);
   }
 }
 },{"../../assets/icons/spicy.svg":"assets/icons/spicy.svg"}],"src/index.js":[function(require,module,exports) {
 "use strict";
 
-require("./style/reset.css");
-
-require("./style/index.css");
+require("./style/global.css");
 
 var _menu = _interopRequireDefault(require("./menu"));
 
@@ -383,7 +401,55 @@ menuItems.forEach(function (item) {
   (0, _helper.populateMenu)("pasta", pasta, item.name, item.description, item.price, item.menuOrder, item.type, item.spicy);
   (0, _helper.populateMenu)("pizza", pizza, item.name, item.description, item.price, item.menuOrder, item.type, item.spicy);
 });
-},{"./style/reset.css":"src/style/reset.css","./style/index.css":"src/style/index.css","./menu":"src/menu.js","./utils/helper":"src/utils/helper.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+var sliderImages = document.querySelectorAll(".hero__slide");
+var arrowLeft = document.querySelector("#arrow-left");
+var arrowRight = document.querySelector("#arrow-right");
+var current = 0; // Clear all images
+
+function reset() {
+  for (var i = 0; i < sliderImages.length; i++) {
+    sliderImages[i].style.display = "none";
+  }
+} // Init slider
+
+
+function startSlide() {
+  reset();
+  sliderImages[0].style.display = "flex";
+} // Show prev
+
+
+function slideLeft() {
+  reset();
+  sliderImages[current - 1].style.display = "flex";
+  current--;
+} // Show next
+
+
+function slideRight() {
+  reset();
+  sliderImages[current + 1].style.display = "flex";
+  current++;
+} // Left arrow click
+
+
+arrowLeft.addEventListener("click", function () {
+  if (current === 0) {
+    current = sliderImages.length;
+  }
+
+  slideLeft();
+}); // Right arrow click
+
+arrowRight.addEventListener("click", function () {
+  if (current === sliderImages.length - 1) {
+    current = -1;
+  }
+
+  slideRight();
+});
+startSlide();
+},{"./style/global.css":"src/style/global.css","./menu":"src/menu.js","./utils/helper":"src/utils/helper.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;

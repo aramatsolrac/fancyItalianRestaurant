@@ -117,9 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"assets/spicy.svg":[function(require,module,exports) {
-module.exports = "/spicy.c01b4fda.svg";
-},{}],"node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+})({"node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -186,12 +184,19 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"src/styles.css":[function(require,module,exports) {
+},{"./bundle-url":"node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"src/style/reset.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../assets/spicy.svg":[["spicy.c01b4fda.svg","assets/spicy.svg"],"assets/spicy.svg"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/menu.js":[function(require,module,exports) {
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"assets/icons/spicy.svg":[function(require,module,exports) {
+module.exports = "/spicy.fdb2c73e.svg";
+},{}],"src/style/index.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"./../../assets/images/restaurant.jpeg":[["restaurant.4121a125.jpeg","assets/images/restaurant.jpeg"],"assets/images/restaurant.jpeg"],"./../../assets/icons/spicy.svg":[["spicy.fdb2c73e.svg","assets/icons/spicy.svg"],"assets/icons/spicy.svg"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/menu.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -317,7 +322,7 @@ exports.createElement = createElement;
 exports.formatNumber = formatNumber;
 exports.populateMenu = populateMenu;
 
-var _spicy = _interopRequireDefault(require("../../assets/spicy.svg"));
+var _spicy = _interopRequireDefault(require("../../assets/icons/spicy.svg"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -342,18 +347,20 @@ function createElement(element) {
 
 function populateMenu(menuName, elementName, name, description, price, menuOrder, itemType, spicy) {
   if (itemType === menuName) {
-    var div = createElement("div", "menu-item");
+    var div = createElement("div", "menu__item");
     console.log({
       spicy: spicy
     });
-    div.innerHTML = "\n      <h3>".concat(name, "</h3> \n      <img class=\"spicy-icon\" width=\"30\" src=\"").concat(spicy ? _spicy.default : "", "\" >\n      <p>").concat(description, "</p>\n      <p>").concat(formatNumber(price), "</p>\n      <p>").concat(menuOrder, "</p>\n\n    ");
+    div.innerHTML = "\n      <h3>".concat(name, "</h3> \n      <img class=\"spicy-icon\" width=\"30\" src=\"").concat(spicy ? _spicy.default : "", "\" >\n      <p>").concat(description, "</p>\n      <p>").concat(formatNumber(price), "</p>\n    ");
     elementName.appendChild(div);
   }
 }
-},{"../../assets/spicy.svg":"assets/spicy.svg"}],"src/index.js":[function(require,module,exports) {
+},{"../../assets/icons/spicy.svg":"assets/icons/spicy.svg"}],"src/index.js":[function(require,module,exports) {
 "use strict";
 
-require("./styles.css");
+require("./style/reset.css");
+
+require("./style/index.css");
 
 var _menu = _interopRequireDefault(require("./menu"));
 
@@ -376,7 +383,7 @@ menuItems.forEach(function (item) {
   (0, _helper.populateMenu)("pasta", pasta, item.name, item.description, item.price, item.menuOrder, item.type, item.spicy);
   (0, _helper.populateMenu)("pizza", pizza, item.name, item.description, item.price, item.menuOrder, item.type, item.spicy);
 });
-},{"./styles.css":"src/styles.css","./menu":"src/menu.js","./utils/helper":"src/utils/helper.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./style/reset.css":"src/style/reset.css","./style/index.css":"src/style/index.css","./menu":"src/menu.js","./utils/helper":"src/utils/helper.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -404,7 +411,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51013" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59208" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

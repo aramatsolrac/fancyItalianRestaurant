@@ -1,4 +1,5 @@
-import "./styles.css";
+import "./style/reset.css";
+import "./style/index.css";
 import menu from "./menu";
 import { populateMenu } from "./utils/helper";
 

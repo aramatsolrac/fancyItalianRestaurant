@@ -1,7 +1,7 @@
 "use strict";
 // const spicyIcon = "./../assets/spicy.svg";
 
-import spicyIcon from "../../assets/spicy.svg";
+import spicyIcon from "../../assets/icons/spicy.svg";
 
 // utility to change the number to currency format
 export function formatNumber(number) {
@@ -31,15 +31,13 @@ export function populateMenu(
   spicy
 ) {
   if (itemType === menuName) {
-    const div = createElement("div", "menu-item");
+    const div = createElement("div", "menu__item");
     console.log({ spicy });
     div.innerHTML = `
       <h3>${name}</h3> 
       <img class="spicy-icon" width="30" src="${spicy ? spicyIcon : ""}" >
       <p>${description}</p>
       <p>${formatNumber(price)}</p>
-      <p>${menuOrder}</p>
-
     `;
     elementName.appendChild(div);
   }

@@ -34,10 +34,16 @@ export function populateMenu(
     const div = createElement("div", "menu__item");
     console.log({ spicy });
     div.innerHTML = `
-      <h3>${name}</h3> 
-      <img class="spicy-icon" width="30" src="${spicy ? spicyIcon : ""}" >
-      <p>${description}</p>
-      <p>${formatNumber(price)}</p>
+      <div class="menu__name-and-price">
+        <div class="menu__name">
+          <h3>${name}</h3>
+          <img class="menu__spicy" src="${spicy ? spicyIcon : ""}" >
+        </div>
+        <div>
+          <p>${formatNumber(price)}</p>
+        </div>
+      </div>
+      <p class="menu__description">${description}</p>
     `;
     elementName.appendChild(div);
   }

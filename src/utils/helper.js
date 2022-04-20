@@ -1,5 +1,4 @@
 "use strict";
-// const spicyIcon = "./../assets/spicy.svg";
 
 import spicyIcon from "../../assets/icons/spicy.svg";
 
@@ -20,31 +19,19 @@ export function createElement(element, className = null, text = null) {
 }
 
 // utility to append DOM elements to the DOM
-export function populateMenu(
-  menuName,
-  elementName,
-  name,
-  description,
-  price,
-  menuOrder,
-  itemType,
-  spicy
-) {
-  if (itemType === menuName) {
-    const div = createElement("div", "menu__item");
-    console.log({ spicy });
-    div.innerHTML = `
+export function renderItem(categoryElement, name, description, price, spicy) {
+  const div = createElement("div", "menu__item");
+  div.innerHTML = `
       <div class="menu__name-and-price">
         <div class="menu__name">
           <h3>${name}</h3>
           <img class="menu__spicy" src="${spicy ? spicyIcon : ""}" >
         </div>
         <div>
-          <p>${formatNumber(price)}</p>
+          <p class="menu__price">${formatNumber(price)}</p>
         </div>
       </div>
-      <p class="menu__description">${description}</p>
+      <p class="menu__sub-description">${description}</p>
     `;
-    elementName.appendChild(div);
-  }
+  categoryElement.appendChild(div);
 }

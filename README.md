@@ -63,7 +63,7 @@ It's a single-page website to show the menu of the Italian restaurant.
   
 - [sweetalert2](https://github.com/sweetalert2/sweetalert2)
     - Open source JS library that helps us create stylized alerts pop up.
-    - I have been using this on many of the projects I have worked on. I think is accessible, and easy to understand how to apply it in a project.
+    - I have been using this on many of the projects I have worked on. I think it is accessible, and easy to understand how to apply it in a project.
 
 - [Exercism](https://exercism.org/)
 

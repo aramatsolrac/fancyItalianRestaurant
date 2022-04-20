@@ -124,8 +124,9 @@ select {
 .toggle {
   display: flex;
   justify-content: flex-end;
-  width: 80%;
+  width: 100%;
   margin: 1rem 0;
+  padding: 0 3rem;
 }
 
 .toggle__content {
@@ -166,6 +167,16 @@ select {
 .toggle__input:checked + .toggle__label::after {
   transform: translate(-1.125rem);
   background-color: var(--color-header);
+}
+
+/* responsive design */
+
+/* desktop */
+@media screen and (min-width: 1280px) {
+  .toggle {
+    width: 80%;
+    padding: 0;
+  }
 }
 
 /* header */
@@ -524,7 +535,7 @@ select {
 }
 
 .menu__no-item {
-  font-size: 2rem;
+  font-size: 0.6rem;
   padding: 1rem 0;
   margin: 1rem 0;
   width: 55rem;
@@ -572,6 +583,7 @@ select {
 
   .menu__no-item {
     min-width: 65rem;
+    font-size: 1.2rem;
   }
 
   .disclaimer__content {

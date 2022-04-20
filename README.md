@@ -25,8 +25,8 @@ It's a single-page website to show the menu of the Italian restaurant.
 - For the back-end, I did the delete routes for the API, and also, our group did pair programing to do the edit route.
 - For the front-end, I did the react routes, I did the Warehouses and Warehouses Details pages, where I had to fetch the data and do the responsive design. Besides that, I also did the responsive design of the Inventory page and helped my teammate finish the Item Availability part of the "Add New Inventory Item" page.
 - I also deployed the API and the App using Heroku.
-- [In Stock Live](https://instockproject.herokuapp.com/)
-  - _Note: If it does not open at the first try, git it a minute because free heroku dyno could be sleeping._
+- [In Stock](https://instockproject.herokuapp.com/)
+  - _Note: If it does not open at the first try, give it a minute because free heroku dyno could be sleeping._
 - Code is in a Private Repo.
 
 ## Advice App - Hackathon
@@ -36,7 +36,7 @@ It's a single-page website to show the menu of the Italian restaurant.
 - Communication was crucial to us during this hackathon so the group would deliver the app on time.
 - I also deployed the API and the App using Heroku.
 - [Advice Generator App](https://advice-generator-project.herokuapp.com/)
-  - _Note: If it does not open at the first try, git it a minute because free heroku dyno could be sleeping._
+  - _Note: If it does not open at the first try, give it a minute because free heroku dyno could be sleeping._
 - [Code](https://github.com/aramatsolrac/advice-generator-app)
 
 ## Movies Search - Hackathon
@@ -147,7 +147,7 @@ I would like to focus my efforts on Javascript to have a good and deep understan
 ### Live
 
 - [Fancy Italian Restaurant](https://fancy-italian-restaurant.herokuapp.com/)
-  - _Note: If it does not open at the first try, git it a minute because free heroku dyno could be sleeping._  
+  - _Note: If it does not open at the first try, give it a minute because free heroku dyno could be sleeping._  
 
 ## Author
 

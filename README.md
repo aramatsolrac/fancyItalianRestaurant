@@ -143,7 +143,7 @@ I would like to focus my efforts on Javascript to have a good and deep understan
 
 ### Live
 
-- [Fancy Italian Restaurant](https://aramatsolrac.github.io/fancyItalianRestaurant/)
+- [Fancy Italian Restaurant](https://fancy-italian-restaurant.herokuapp.com/)
 
 ## Author
 

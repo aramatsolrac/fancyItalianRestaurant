@@ -1,0 +1,14 @@
+:root {
+  --color-light: rgb(245, 245, 245);
+  --color-white: rgb(255, 255, 255);
+  --color-darker: rgb(0, 0, 0);
+  --color-dark: rgb(33, 37, 41);
+  --color-grey: rgb(52, 58, 64);
+  --color-light-grey: rgb(175, 175, 175);
+  --color-lighter-grey: #d3d3d3;
+  --color-footer: #869d69;
+  --color-header: #901a1a;
+  --box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  --linear-gradient: linear-gradient(to right, #869d69, #fff, #901a1a);
+  --overlay: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}

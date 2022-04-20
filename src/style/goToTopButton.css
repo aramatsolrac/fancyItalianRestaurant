@@ -1,0 +1,26 @@
+/* go to top button */
+
+.goToTop {
+  display: none;
+  position: fixed;
+  bottom: 1.25rem;
+  right: 2.5rem;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 1.25rem;
+  border-radius: 50%;
+}
+
+.goToTop:before {
+  content: "";
+  background-image: url("./../../assets/icons/arrow-back.svg");
+  background-repeat: none;
+  background-position: center;
+}
+
+.goToTop:hover {
+  background-color: var(--color-light);
+}

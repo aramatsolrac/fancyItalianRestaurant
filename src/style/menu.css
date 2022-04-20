@@ -96,7 +96,7 @@
 }
 
 .menu__no-item {
-  font-size: 2rem;
+  font-size: 0.6rem;
   padding: 1rem 0;
   margin: 1rem 0;
   width: 55rem;
@@ -144,6 +144,7 @@
 
   .menu__no-item {
     min-width: 65rem;
+    font-size: 1.2rem;
   }
 
   .disclaimer__content {

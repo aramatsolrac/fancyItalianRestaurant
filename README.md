@@ -67,17 +67,17 @@ It's a single-page website to show the menu of the Italian restaurant.
 
 - [Exercism](https://exercism.org/)
 
-  - Open source project to practice algorithm using many different languages
+  - Open source project to practice algorithm using many different languages.
   - I have been using this to practice JS when I have time.
   - It is a great platform for those who are starting to learn a new programming language.
 
-- Some articles that i found really helpful on my journey:
+- Some articles that I found really helpful on my journey:
 
   - [Save states by local storage and life cycle method](https://tomoharutsutsumi.medium.com/save-states-by-local-storage-and-life-cycle-method-f7d0aaf0c11e)
   - [How to Deploy Your React App to Heroku
     ](https://betterprogramming.pub/how-to-deploy-your-react-app-to-heroku-aedc28b218ae)
 
-- Women in the teach who are an inspiration for me:
+- Women in the tech who are an inspiration for me:
   - [Opinionated React](https://opinionatedreact.com/)
     - Sara is the author of the book Opinionated React, she is one of the speakers at the React Summit 2022.
   - [Krystal Campioni](https://krystalcampioni.com/)

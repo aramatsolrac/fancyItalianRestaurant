@@ -79,9 +79,9 @@ It's a single-page website to show the menu of the Italian restaurant.
 - Women in the teach who are an inspiration for me:
   - [Opinionated React](https://opinionatedreact.com/)
     - Sara is the author of the book Opinionated React, she is one of the speakers at the React Summit 2022.
-  - [Kristal Campioni](https://krystalcampioni.com/)
-    - Kristal's website is a great inspiration for me because it is different from anything else I have ever seen, and one day I want to be able to build something like that.
-  - It is very inspiring for me to see Brazilian women, like Sara and Kristal, doing a great job in the community.
+  - [Krystal Campioni](https://krystalcampioni.com/)
+    - Krystal's website is a great inspiration for me because it is different from anything else I have ever seen, and one day I want to be able to build something like that.
+  - It is very inspiring for me to see Brazilian women, like Sara and Krystal, doing a great job in the community.
 
 </details>
 

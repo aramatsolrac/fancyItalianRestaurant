@@ -70,20 +70,24 @@ It's a single-page website to show the menu of the italian restaurant.
   - I have been using this to practice JS when I have time.
   - It is a great platform for those who are starting to learn a new programming language.
 
-- Some articles that i found really helpful on my journey: - [Save states by local storage and life cycle method](https://tomoharutsutsumi.medium.com/save-states-by-local-storage-and-life-cycle-method-f7d0aaf0c11e) - [How to Deploy Your React App to Heroku
-  ](https://betterprogramming.pub/how-to-deploy-your-react-app-to-heroku-aedc28b218ae)
+- Some articles that i found really helpful on my journey:
 
-- [Opinionated React](https://opinionatedreact.com/)
-- https://krystalcampioni.com/
+  - [Save states by local storage and life cycle method](https://tomoharutsutsumi.medium.com/save-states-by-local-storage-and-life-cycle-method-f7d0aaf0c11e)
+  - [How to Deploy Your React App to Heroku
+    ](https://betterprogramming.pub/how-to-deploy-your-react-app-to-heroku-aedc28b218ae)
+
+- Women in the teach who are an inspiration for me:
+  - [Opinionated React](https://opinionatedreact.com/)
+    - Sara is the author of the book Opinionated React, she is one of the speakers at the React Summit 2022.
+  - [Kristal Campioni](https://krystalcampioni.com/)
+    - Kristal's website is a great inspiration for me because it is different from anything else I have ever seen, and one day I want to be able to build something like that.
+  - It is very inspiring for me to see Brazilian women, like Sara and Kristal, doing a great job in the community.
 
 </details>
 
 <details>
 <summary>Focus</summary>
-- Vanilla Javascript - specialist
-- React 
-- Front end
-I want a professional and deep experience with Javascript, mainly with Front-End, which is where I think I can help more, but also with Back-End as a Full Stack Developer.
+I would like to focus my efforts on Javascript to have a good and deep understanding of the base language I would use on my day to day basis. I want to actively participate in projects and understand the team's strategies to make decisions on how to help our clients. Work with other teams such as UX/UI to become a better front-end developer but also have contact with the back-end so I will continue to work as a full-stack developer. If I was given the opportunity to have a mentor, I would love to have feedback, code reviews, documentation and set personal goals to improve myself and grow in the company.
 </details>
 
 ### The Challenge

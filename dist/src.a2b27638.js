@@ -189,6 +189,16 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/style/goToTopButton.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"./../../assets/icons/arrow-back.svg":[["arrow-back.8b6db8cc.svg","assets/icons/arrow-back.svg"],"assets/icons/arrow-back.svg"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/style/toggle.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
 },{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/style/header.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
@@ -209,12 +219,17 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/style/root.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
 },{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/style/global.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./reset.css":"src/style/reset.css","./header.css":"src/style/header.css","./hero.css":"src/style/hero.css","./menu.css":"src/style/menu.css","./footer.css":"src/style/footer.css","_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/menu.js":[function(require,module,exports) {
+},{"./reset.css":"src/style/reset.css","./goToTopButton.css":"src/style/goToTopButton.css","./toggle.css":"src/style/toggle.css","./header.css":"src/style/header.css","./hero.css":"src/style/hero.css","./menu.css":"src/style/menu.css","./footer.css":"src/style/footer.css","./root.css":"src/style/root.css","_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/menu.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -333,14 +348,14 @@ exports.default = _default;
 },{}],"assets/icons/spicy.svg":[function(require,module,exports) {
 module.exports = "/spicy.fdb2c73e.svg";
 },{}],"src/utils/helper.js":[function(require,module,exports) {
-"use strict"; // const spicyIcon = "./../assets/spicy.svg";
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.createElement = createElement;
 exports.formatNumber = formatNumber;
-exports.populateMenu = populateMenu;
+exports.renderItem = renderItem;
 
 var _spicy = _interopRequireDefault(require("../../assets/icons/spicy.svg"));
 
@@ -365,15 +380,10 @@ function createElement(element) {
 } // utility to append DOM elements to the DOM
 
 
-function populateMenu(menuName, elementName, name, description, price, menuOrder, itemType, spicy) {
-  if (itemType === menuName) {
-    var div = createElement("div", "menu__item");
-    console.log({
-      spicy: spicy
-    });
-    div.innerHTML = "\n      <div class=\"menu__name-and-price\">\n        <div class=\"menu__name\">\n          <h3>".concat(name, "</h3>\n          <img class=\"menu__spicy\" src=\"").concat(spicy ? _spicy.default : "", "\" >\n        </div>\n        <div>\n          <p>").concat(formatNumber(price), "</p>\n        </div>\n      </div>\n      <p class=\"menu__description\">").concat(description, "</p>\n    ");
-    elementName.appendChild(div);
-  }
+function renderItem(categoryElement, name, description, price, spicy) {
+  var div = createElement("div", "menu__item");
+  div.innerHTML = "\n      <div class=\"menu__name-and-price\">\n        <div class=\"menu__name\">\n          <h3>".concat(name, "</h3>\n          <img class=\"menu__spicy\" src=\"").concat(spicy ? _spicy.default : "", "\" >\n        </div>\n        <div>\n          <p class=\"menu__price\">").concat(formatNumber(price), "</p>\n        </div>\n      </div>\n      <p class=\"menu__sub-description\">").concat(description, "</p>\n    ");
+  categoryElement.appendChild(div);
 }
 },{"../../assets/icons/spicy.svg":"assets/icons/spicy.svg"}],"src/index.js":[function(require,module,exports) {
 "use strict";
@@ -386,21 +396,54 @@ var _helper = require("./utils/helper");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// *Populate menu using the menu data*
 var starters = document.getElementById("starters");
 var pasta = document.getElementById("pasta");
 var pizza = document.getElementById("pizza");
+var toggleSpicy = document.getElementById("toggle");
 
 var menuItems = _menu.default.items.sort(function (a, b) {
   return a.menuOrder - b.menuOrder;
 });
 
-console.log(menuItems);
-menuItems.forEach(function (item) {
-  console.log(item.spicy);
-  (0, _helper.populateMenu)("starters", starters, item.name, item.description, item.price, item.menuOrder, item.type, item.spicy);
-  (0, _helper.populateMenu)("pasta", pasta, item.name, item.description, item.price, item.menuOrder, item.type, item.spicy);
-  (0, _helper.populateMenu)("pizza", pizza, item.name, item.description, item.price, item.menuOrder, item.type, item.spicy);
-});
+toggleSpicy.addEventListener("click", populateItemWithItems); // Populate menu with menu items
+
+function populateItemWithItems() {
+  // clean menu items of each menu
+  starters.textContent = "";
+  pasta.textContent = "";
+  pizza.textContent = "";
+  populateItemCategory(starters, "starters");
+  populateItemCategory(pasta, "pasta");
+  populateItemCategory(pizza, "pizza");
+}
+
+populateItemWithItems(); // Populate menu with menu items
+
+function populateItemCategory(categoryElement, category) {
+  var spicyChecked = toggleSpicy.checked;
+  var categoryItems = menuItems.filter(function (item) {
+    return item.type === category;
+  });
+
+  if (spicyChecked) {
+    categoryItems = categoryItems.filter(function (item) {
+      return item.spicy;
+    });
+  }
+
+  if (categoryItems.length > 0) {
+    categoryItems.forEach(function (item) {
+      (0, _helper.renderItem)(categoryElement, item.name, item.description, item.price, item.spicy);
+    });
+  } else {
+    var noItem = (0, _helper.createElement)("div");
+    noItem.innerHTML = "\n      <p class=\"menu__no-item\">No spicy option available</p>\n    ";
+    categoryElement.appendChild(noItem);
+  }
+} // *Slider*
+
+
 var sliderImages = document.querySelectorAll(".hero__slide");
 var arrowLeft = document.querySelector("#arrow-left");
 var arrowRight = document.querySelector("#arrow-right");
@@ -410,27 +453,27 @@ function reset() {
   for (var i = 0; i < sliderImages.length; i++) {
     sliderImages[i].style.display = "none";
   }
-} // Init slider
+} // Start slider
 
 
 function startSlide() {
   reset();
   sliderImages[0].style.display = "flex";
-} // Show prev
+} // Show previous image
 
 
 function slideLeft() {
   reset();
   sliderImages[current - 1].style.display = "flex";
   current--;
-} // Show next
+} // Show next image
 
 
 function slideRight() {
   reset();
   sliderImages[current + 1].style.display = "flex";
   current++;
-} // Left arrow click
+} // Left arrow click event
 
 
 arrowLeft.addEventListener("click", function () {
@@ -439,7 +482,7 @@ arrowLeft.addEventListener("click", function () {
   }
 
   slideLeft();
-}); // Right arrow click
+}); // Right arrow click event
 
 arrowRight.addEventListener("click", function () {
   if (current === sliderImages.length - 1) {
@@ -448,7 +491,27 @@ arrowRight.addEventListener("click", function () {
 
   slideRight();
 });
-startSlide();
+startSlide(); // *Scroll to the top of the document*
+
+var goToTop = document.getElementById("goToTop"); // Show the button when the user scrolls down 20px from the top of the document
+
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    goToTop.style.display = "block";
+  } else {
+    goToTop.style.display = "none";
+  }
+} // Scroll to the top of the document when the user clicks on the button
+
+
+goToTop.onclick = function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+};
 },{"./style/global.css":"src/style/global.css","./menu":"src/menu.js","./utils/helper":"src/utils/helper.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -477,7 +540,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59208" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61437" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

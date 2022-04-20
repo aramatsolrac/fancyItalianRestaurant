@@ -1,8 +1,9 @@
 .toggle {
   display: flex;
   justify-content: flex-end;
-  width: 80%;
+  width: 100%;
   margin: 1rem 0;
+  padding: 0 3rem;
 }
 
 .toggle__content {
@@ -43,4 +44,14 @@
 .toggle__input:checked + .toggle__label::after {
   transform: translate(-1.125rem);
   background-color: var(--color-header);
+}
+
+/* responsive design */
+
+/* desktop */
+@media screen and (min-width: 1280px) {
+  .toggle {
+    width: 80%;
+    padding: 0;
+  }
 }

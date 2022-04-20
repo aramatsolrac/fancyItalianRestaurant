@@ -60,6 +60,7 @@ It's a single-page website to show the menu of the Italian restaurant.
 
 <details>
 <summary>Inspiration</summary>
+  
 - [sweetalert2](https://github.com/sweetalert2/sweetalert2)
     - Open source JS library that helps us create stylized alerts pop up.
     - I have been using this on many of the projects I have worked on. I think is accessible, and easy to understand how to apply it in a project.
@@ -138,12 +139,14 @@ I would like to focus my efforts on Javascript to have a good and deep understan
 
 ### Installing
 
-- Download the Repository
-- Open `index.html` on a web browser
+- Download this Repository or clone it: `git clone git@github.com:aramatsolrac/fancyItalianRestaurant.git`
+- `cd` into the new folder and type `npm install`
+- To run the React project type: `npm start`
 
 ### Live
 
 - [Fancy Italian Restaurant](https://fancy-italian-restaurant.herokuapp.com/)
+  - _Note: If it does not open at the first try, git it a minute because free heroku dyno could be sleeping._  
 
 ## Author
 

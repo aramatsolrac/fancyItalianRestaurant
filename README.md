@@ -128,6 +128,7 @@ I would like to focus my efforts on Javascript to have a good and deep understan
 - Access menu options by clicking on "Menu" in the header or the menu category on the slider
 - Scroll to the top, clicking on the arrow back button
 - Filter spicy options by clicking on the toggle button in the menu area
+- Scroll back to the top of the webpage
 
 ### Technologies
 

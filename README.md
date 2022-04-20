@@ -4,7 +4,7 @@ It's a single-page website to show the menu of the Italian restaurant.
 
 ## Table of contents
 
-- [Answers](#Answers)
+- [Challenge Answers](#challenge-answers)
 - [The Challenge](#the-challenge)
 - [Features](#features)
 - [Technologies](#technologies)
@@ -13,7 +13,7 @@ It's a single-page website to show the menu of the Italian restaurant.
 
 ## Overview
 
-### Answers
+### Challenge Answers
 
 <details>
 <summary>Work / Project Examples</summary>

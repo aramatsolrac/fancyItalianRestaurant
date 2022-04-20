@@ -139,7 +139,8 @@ I would like to focus my efforts on Javascript to have a good and deep understan
 
 ### Installing
 
-- Download this Repository or clone it: `git clone git@github.com:aramatsolrac/fancyItalianRestaurant.git`
+- Download this Repository or clone it: 
+`git clone git@github.com:aramatsolrac/fancyItalianRestaurant.git`
 - `cd` into the new folder and type `npm install`
 - To run the React project type: `npm start`
 

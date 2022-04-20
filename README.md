@@ -1,6 +1,6 @@
 # Fancy Italian Restaurant
 
-It's a single-page website to show the menu of the italian restaurant.
+It's a single-page website to show the menu of the Italian restaurant.
 
 ## Table of contents
 

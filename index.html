@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <link
       rel="icon"
@@ -13,14 +13,16 @@
 
   <body>
     <header class="header">
-      <h1>
-        <a href="index.html" class="header__link">
-          <span class="header__logo">Fancy</span>
-          <p class="header__text">Italian Restaurant</p>
-        </a>
-      </h1>
-      <div>
-        <a href="#menu" class="header__menu">Menu</a>
+      <div class="header__wrapper">
+        <h1>
+          <a href="index.html" class="header__link">
+            <span class="header__logo">Fancy</span>
+            <span class="header__text">Italian Restaurant</span>
+          </a>
+        </h1>
+        <div>
+          <a href="#menu" class="header__menu">Menu</a>
+        </div>
       </div>
     </header>
 
@@ -30,26 +32,31 @@
         <div class="hero__slide slide0">
           <div class="hero__content">
             <div class="hero__text">
-              <span
-                >True & memorable taste made with love and
-                <span class="hero__underline">tradition</span></span
-              >
+              <span>True</span>
+              <span>&</span>
+              <span>memorable</span>
+              <span>taste</span>
+              <span>made</span>
+              <span>with</span>
+              <span>love</span>
+              <span>and</span>
+              <span class="hero__underline">tradition</span>
             </div>
           </div>
         </div>
         <div class="hero__slide slide1">
           <div class="hero__content">
-            <a class="hero__link" href="#starters">Starters</a>
+            <a class="hero__link" href="#starters-menu">Starters</a>
           </div>
         </div>
         <div class="hero__slide slide2">
           <div class="hero__content">
-            <a class="hero__link" href="#pasta">Pasta</a>
+            <a class="hero__link" href="#pasta-menu">Pasta</a>
           </div>
         </div>
         <div class="hero__slide slide3">
           <div class="hero__content">
-            <a class="hero__link" href="#pizza">Pizza</a>
+            <a class="hero__link" href="#pizza-menu">Pizza</a>
           </div>
         </div>
       </div>
@@ -57,44 +64,73 @@
     </div>
 
     <main>
+      <button id="goToTop" class="goToTop">
+        <img
+          src="./assets/icons/arrow-back.svg"
+          alt="arrow back"
+          aria-hidden="true"
+        />
+      </button>
       <section id="menu" class="menu">
-        <section class="menu__categories">
+        <div class="menu__header">
+          <h2 class="menu__title">Menu</h2>
+          <p class="menu__description">
+            Inside the trattoria, you'll find even more delectable dishes.
+          </p>
+        </div>
+        <div class="toggle">
+          <div class="toggle__content">
+            <img
+              src="./assets/icons/spicy.svg"
+              alt="spicy"
+              class="disclaimer__img"
+            />
+            <input
+              type="checkbox"
+              class="toggle__input"
+              id="toggle"
+              name="toggle"
+            />
+            <label for="toggle" id="label" class="toggle__label"></label>
+          </div>
+        </div>
+        <section class="menu__categories" id="starters-menu">
           <div class="menu__options">
             <img
               src="./assets/icons/salad.png"
               alt="salad"
               class="menu__icon"
             />
-            <h2 class="menu__title">Starters</h2>
+            <h2 class="menu__subtitle">Starters</h2>
             <div id="starters"></div>
           </div>
         </section>
 
-        <section class="menu__categories">
+        <section class="menu__categories" id="pasta-menu">
           <div class="menu__options">
             <img
               src="./assets/icons/pasta.png"
               alt="pasta"
               class="menu__icon"
             />
-            <h2 class="menu__title">Pasta</h2>
+            <h2 class="menu__subtitle">Pasta</h2>
             <div id="pasta"></div>
           </div>
         </section>
 
-        <section class="menu__categories">
+        <section class="menu__categories" id="pizza-menu">
           <div class="menu__options">
             <img
               src="./assets/icons/Pizza.png"
               alt="pizza"
               class="menu__icon"
             />
-            <h2 class="menu__title">Pizza</h2>
+            <h2 class="menu__subtitle">Pizza</h2>
             <div id="pizza"></div>
           </div>
         </section>
 
-        <section class="disclaimer">
+        <div class="disclaimer">
           <div class="disclaimer__content">
             <img
               src="./assets/icons/spicy.svg"
@@ -103,16 +139,16 @@
             />
             <p class="disclaimer__text">= Spicy</p>
           </div>
-        </section>
+        </div>
       </section>
     </main>
 
-    <footer>
-      <section class="footer">
+    <footer class="footer">
+      <section class="footer__wrapper">
         <div class="footer__content">
           <h3 class="footer__subtitle">Address</h3>
           <p class="footer__text">1011 9 Ave SE</p>
-          <p class="footer__text">Calgary</p>
+          <p class="footer__text">Calgary, AB</p>
         </div>
         <div class="footer__content">
           <h3 class="footer__subtitle">Hours</h3>
